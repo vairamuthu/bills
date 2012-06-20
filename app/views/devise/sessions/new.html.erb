@@ -1,0 +1,30 @@
+<div class="wrapper logincontainer">
+	<table class="lgntable">
+		<tr>
+			<td class="headingcolumn">
+				<h2> User Sign in</h2>
+			</td>
+		</tr>
+<tr>
+	<td>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, :class => "fields", :title => "Enter Username", :size =>"45" %></div><br/>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password, :class =>"fields", :title => "Enter Password", :size => "45" %></div><br/>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div> <br/>
+  <% end -%>
+
+  <div><%= f.submit "Sign in" %></div><br/>
+<% end %>
+
+<%= render "links" %>
+	</td>
+</tr>
+
+
+</table>
+</div>

@@ -1,0 +1,96 @@
+body {
+
+}
+.container{
+	
+}
+.left{
+	float:left;
+	width: 20%;
+	word-wrap: break-word;
+	display : block;
+	height : 100%; 
+	padding: 20px 5px 5px 2px;
+	/*position : fixed;*/
+	overflow : hidden;
+}
+
+.right{
+	padding: 20px 100px;
+	width : 49%;
+	/*height: auto;*/
+	/*position : absolute;*/
+	/*overflow : hidden;*/
+	/*float : right;*/
+
+}
+
+div#menu { margin:5px auto; }
+
+.verticalline{
+	width : 0px;
+	border : 0.5px solid #CCCCCC;
+	height : 100%;
+	position : absolute;
+	left :21%;
+	
+	
+}
+
+.logincontainer{
+	padding-left : 200px;
+	padding-right : 150px;
+	padding-top : 130px;
+	padding-bottom : 150 px;
+}
+
+.headingcolumn{
+	background-color :#3B5998;
+	color : white;
+}
+
+
+.lgntable{
+	width : 400px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color : #3B5998;
+    padding : 10;
+    
+}
+
+
+/* CSS Document */
+
+
+.wrapper{
+	
+	width:960px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+
+.fields{
+	padding:10px;
+	border:1px #CCC solid;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px;
+	background:#FFF;
+}
+
+h3{
+	font-size:18px;
+	text-shadow:0 1px 0 rgba(0, 0, 0, 0.3);
+	color:#FFF;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+ul{
+	list-style:none;
+}
+
+ul li{
+	padding-top:10px;
+	padding-bottom:10px;
+}

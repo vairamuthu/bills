@@ -1,0 +1,19 @@
+<div style="float: right">
+	<%= link_to "New Container", new_admin_container_path%>
+</div>
+<div>
+	<table id = "rounded-corner">
+		<thead>
+		<tr>
+			<th class="rounded-company">S.No</th>
+			<th>Name </th>
+		</tr>
+		</thead>
+		<% @containers.each do |con| %>
+		<tr>
+			<td>1</td>
+			<td><%= con.name %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>

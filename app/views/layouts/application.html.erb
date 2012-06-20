@@ -2,13 +2,46 @@
 <html>
 <head>
   <title>Bills</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+/*demo page css*/
+p{ font: 70% "Trebuchet MS", sans-serif; margin: 8px;}
+.demoHeaders { margin-top: 2em; }
+#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+ul#icons {margin: 0; padding: 0;}
+ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left; list-style: none;}
+ul#icons span.ui-icon {float: left; margin: 0 4px;}
+</style>
 </head>
-<body>
+<body style="background-color: #E0E5F5 "> 
+	<div style="float:right; color:white"><%if user_signed_in?%>
+		Hi <%= current_user.name%> | <%= link_to "sign out", destroy_user_session_path, :method => :delete %> <% end %>
+	</div>
 
-<%= yield %>
+	<div style="height:15px; background-color: #3B5998 ; color: white;  text-align: center; padding: 20px 0;" >ABC Pvt. Ltd  </div>
+	
+	 
+	<div id="menu"> <%= render :partial=> "layouts/menus"%> </div>
+	<% if notice%>
+	<div class='ui-widget'>
+	<div class='ui-state-highlight ui-corner-all' style="margin-top: 2px; padding: 0 .7em;">
+		<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+	<%= notice %></p></div></div>
+<%end%>
+<div class="container">
 
+<div class="right">
+
+     <%= yield %>
+
+</div>
+</div>
 </body>
+<script>
+document.write('<div style="display:none;"><a href="http://apycom.com/">jQuery Menu by Apycom</a></div>');
+</script>
 </html>
+					
